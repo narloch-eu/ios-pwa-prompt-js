@@ -1,0 +1,33 @@
+{
+  "name": "ios-pwa-prompt-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass styles/index.scss styles/index.css --watch",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narloch-eu/ios-pwa-prompt-js.git"
+  },
+  "keywords": [
+    "ios",
+    "pwa",
+    "modal",
+    "native-promt",
+    "vanilla-js",
+    "sass",
+    "polyfill"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/narloch-eu/ios-pwa-prompt-js/issues"
+  },
+  "homepage": "https://github.com/narloch-eu/ios-pwa-prompt-js#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "node-sass": "^4.13.1"
+  }
+}
