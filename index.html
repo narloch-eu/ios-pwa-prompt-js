@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IOS PWA prompt JS</title>
     <link rel="stylesheet" type="text/css" href="/styles/index.css" />
-    <script src="/js/index.js"></script>
 </head>
 
 <body>
@@ -16,18 +15,18 @@
         <p class="header__paragraph">Simple polyfill for browsers on iOS</p>
     </header>
     <main class="main">
-        <button class="main__button">Open PWA Prompt</button>
+        <button class="main__button main__button--js">Open PWA Prompt</button>
     </main>
-    <div class="ios-pwa-prompt ios-pwa-prompt__overlay ios-pwa-prompt__overlay--hidden" aria-label="Close"
+    <div class="ios-pwa-prompt ios-pwa-prompt__overlay ios-pwa-prompt__overlay--hidden ios-pwa-prompt__overlay--js" aria-label="Close"
         role="button" id="ios-pwa-modal-overlay">
-        <div class="ios-pwa-prompt__container ios-pwa-prompt__container--hidden"
+        <div class="ios-pwa-prompt__container ios-pwa-prompt__container--hidden ios-pwa-prompt__container--js"
             aria-describedby="ios-pwa-modal-description" aria-labelledby="ios-pwa-modal-title" role="dialog"
             id="ios-pwa-modal-container">
             <div class="ios-pwa-header">
                 <p id="ios-pwa-modal-title" class="ios-pwa-header__title">
                     Add to Home Screen
                 </p>
-                <button class="ios-pwa-header__button" id="ios-pwa-modal-button">
+                <button class="ios-pwa-header__button ios-pwa-header__button--js" id="ios-pwa-modal-button">
                     Cancel
                 </button>
             </div>
@@ -67,5 +66,6 @@
             </div>
         </div>
     </div>
+    <script src="/js/index.js"></script>
 </body>
 </html>
