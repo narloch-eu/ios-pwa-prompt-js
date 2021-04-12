@@ -1,0 +1,13 @@
+.main {
+    &__button {
+        width: 220px;
+        height: 52px;
+        padding: 14px 10px;
+        background: $bg-color-dark;
+        filter: brightness(1.1);
+        font-size: 18px;
+        color: $blue-color-dark;
+        cursor: pointer;
+        border: 1px solid $border-color-dark;
+    }
+}

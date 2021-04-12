@@ -1,0 +1,16 @@
+.header{
+    margin-bottom: 10%;
+    text-align: center;
+    width: 100%;
+    border: 2px solid $blue-color-dark;
+    border-left: none;
+    border-right: none;
+    &__heading {
+        margin: 24px 0;
+        font-size: 34px;
+    }
+
+    &__paragraph {
+        margin: 24px 0;
+    }
+}
