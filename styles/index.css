@@ -50,7 +50,7 @@ body {
 .noScroll {
   overflow: hidden; }
 
-.ios-pwa-overlay {
+.ios-pwa-prompt__overlay {
   left: 0;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -62,14 +62,14 @@ body {
   z-index: 1000;
   background: rgba(10, 10, 10, 0.5);
   color: rgba(235, 235, 245, 0.6); }
-  .ios-pwa-overlay.visible {
+  .ios-pwa-prompt__overlay--visible {
     opacity: 1;
     display: block; }
-  .ios-pwa-overlay.hidden {
+  .ios-pwa-prompt__overlay--hidden {
     pointer-events: none;
     touch-action: none; }
 
-.ios-pwa-container {
+.ios-pwa-prompt__container {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 10px;
@@ -85,10 +85,10 @@ body {
   z-index: 1000;
   background: rgba(65, 65, 65, 0.7);
   filter: brightness(1.1); }
-  .ios-pwa-container.visible {
+  .ios-pwa-prompt__container--visible {
     transform: translateY(0);
     display: block; }
-  .ios-pwa-container.hidden {
+  .ios-pwa-prompt__container--hidden {
     pointer-events: none;
     touch-action: none; }
 
@@ -104,7 +104,7 @@ body {
   justify-content: space-between;
   padding: 13px 16px;
   border-color: rgba(140, 140, 140, 0.7); }
-  .ios-pwa-header-title {
+  .ios-pwa-header__title {
     color: rgba(235, 235, 245, 0.6);
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 18px;
@@ -112,7 +112,7 @@ body {
     line-height: 1.125;
     margin: 0;
     padding: 0; }
-  .ios-pwa-header-cancel {
+  .ios-pwa-header__button {
     color: #0984ff;
     font-size: 16px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -125,7 +125,7 @@ body {
 .ios-pwa-body {
   display: flex;
   width: 100%; }
-  .ios-pwa-body-description {
+  .ios-pwa-body__description {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-top: 0px;
     border-left: 0px;
@@ -145,30 +145,30 @@ body {
   margin: 0;
   padding: 0;
   border-color: rgba(235, 235, 245, 0.6); }
-  .ios-pwa-text-bold {
+  .ios-pwa-text__bold {
     font-weight: 600; }
 
 .ios-pwa-instruction {
   color: inherit;
   margin: 0 16px;
   padding: 16px; }
-  .ios-pwa-instruction-step {
+  .ios-pwa-instruction__step {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     text-align: left;
     margin-bottom: 16px; }
-    .ios-pwa-instruction-step:last-of-type {
+    .ios-pwa-instruction__step:last-of-type {
       margin-bottom: 0; }
-  .ios-pwa-instruction-share-icon, .ios-pwa-instruction-home-icon {
+  .ios-pwa-instruction__icon {
     flex: 0 0 auto;
     height: 30px;
     margin-right: 32px;
     width: 25px; }
-  .ios-pwa-instruction-home-icon {
-    color: white;
-    fill: white; }
-  .ios-pwa-instruction-share-icon {
-    color: #0984ff;
-    fill: #0984ff; }
+    .ios-pwa-instruction__icon--share {
+      color: #0984ff;
+      fill: #0984ff; }
+    .ios-pwa-instruction__icon--home {
+      color: white;
+      fill: white; }

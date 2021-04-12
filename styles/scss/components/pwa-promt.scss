@@ -2,58 +2,58 @@
     overflow: hidden;
 }
 
-.ios-pwa-overlay {
-    left: 0;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    transition: opacity 0.2s ease-in;
-    width: 100vw;
-    z-index: 1000;
-    background: $overlay-color-dark;
-    color: $font-color-dark;
+.ios-pwa-prompt {
+    &__overlay {
+        left: 0;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        transition: opacity 0.2s ease-in;
+        width: 100vw;
+        z-index: 1000;
+        background: $overlay-color-dark;
+        color: $font-color-dark;
 
-    &.visible {
-        opacity: 1;
-        display: block;
+        &--visible {
+            opacity: 1;
+            display: block;
+        }
+
+        &--hidden {
+            pointer-events: none;
+            touch-action: none;
+        }
     }
 
-    &.hidden {
-        pointer-events: none;
-        touch-action: none;
+    &__container {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        bottom: 0;
+        color: black;
+        left: 0;
+        margin: 0 8px 10px;
+        overflow: hidden;
+        position: fixed;
+        transform: translateY(calc(100% + 10px));
+        transition: transform 0.4s cubic-bezier(0.4, 0.24, 0.3, 1);
+        width: calc(100vw - 16px);
+        z-index: 1000;
+        background: $bg-color-dark;
+        filter: brightness(1.1);
+
+        &--visible {
+            transform: translateY(0);
+            display: block;
+        }
+
+        &--hidden {
+            pointer-events: none;
+            touch-action: none;
+        }
     }
-}
-
-.ios-pwa-container {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    bottom: 0;
-    color: black;
-    left: 0;
-    margin: 0 8px 10px;
-    overflow: hidden;
-    position: fixed;
-    transform: translateY(calc(100% + 10px));
-    transition: transform 0.4s cubic-bezier(0.4, 0.24, 0.3, 1);
-    width: calc(100vw - 16px);
-    z-index: 1000;
-    background: $bg-color-dark;
-    filter: brightness(1.1);
-
-    &.visible {
-        transform: translateY(0);
-        display: block;
-    }
-
-    &.hidden {
-        pointer-events: none;
-        touch-action: none;
-    }
-
-
 }
 
 .ios-pwa-header {
@@ -69,7 +69,7 @@
     padding: 13px 16px;
     border-color: $border-color-dark;
 
-    &-title {
+    &__title {
         color: $font-color-dark;
         font-family: $font-family;
         font-size: 18px;
@@ -79,7 +79,7 @@
         padding: 0;
     }
 
-    &-cancel {
+    &__button {
         color: $blue-color-dark;
         font-size: 16px;
         font-family: $font-family;
@@ -95,7 +95,7 @@
     display: flex;
     width: 100%;
 
-    &-description {
+    &__description {
         border-bottom: 1px solid $border-color-legacy;
         border-top: 0px;
         border-left: 0px;
@@ -118,7 +118,7 @@
     padding: 0;
     border-color: $font-color-dark;
 
-    &-bold {
+    &__bold {
         font-weight: 600;
     }
 }
@@ -128,7 +128,7 @@
     margin: 0 16px;
     padding: 16px;
 
-    &-step {
+    &__step {
         align-items: center;
         display: flex;
         flex-flow: row nowrap;
@@ -141,22 +141,21 @@
         }
     }
 
-    &-share-icon,
-    &-home-icon {
+    &__icon {
         flex: 0 0 auto;
         height: 30px;
         margin-right: 32px;
         width: 25px;
-    }
 
-    &-home-icon {
-        color: $white-color-dark;
-        fill: $white-color-dark;
+        &--share {
+            color: $blue-color-dark;
+            fill: $blue-color-dark;
+        }
 
-    }
+        &--home {
+            color: $white-color-dark;
+            fill: $white-color-dark;
 
-    &-share-icon {
-        color: $blue-color-dark;
-        fill: $blue-color-dark;
+        }
     }
 }
