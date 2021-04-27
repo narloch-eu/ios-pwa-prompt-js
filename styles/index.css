@@ -45,7 +45,9 @@ body {
   font-size: 18px;
   color: white;
   cursor: pointer;
-  border: 2px solid rgba(140, 140, 140, 0.7); }
+  border: 2px solid rgba(140, 140, 140, 0.7);
+  border-radius: 10px;
+  margin: 10px; }
 
 .noScroll {
   overflow: hidden; }

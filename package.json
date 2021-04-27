@@ -1,11 +1,11 @@
 {
   "name": "ios-pwa-prompt-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "iOS PWA native prompt component with Vanilla-JS, HTML and CSS",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass styles/index.scss styles/index.css --watch",
-    "start": "live-server"
+    "sass": "node-sass styles/index.scss styles/index.css",
+    "start": "live-server & npm run sass"
   },
   "repository": {
     "type": "git",
